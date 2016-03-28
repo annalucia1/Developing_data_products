@@ -1,8 +1,7 @@
-#setwd("C:/Users/anlu/Dropbox (dropbox)/R/DEVELOPING DATA PRODUCT/reproducible research project/RepData_PeerAssessment2-master/RepData_PeerAssessment2-master/")
-setwd("D:/Dropbox (dropbox)/R/DEVELOPING DATA PRODUCT/reproducible research project/RepData_PeerAssessment2-master/RepData_PeerAssessment2-master/")
 
-
+library(rsconnect)
 library(shiny)
+
 calculator<-function(height,weight) weight*703/height/height
 
 shinyServer(
@@ -13,5 +12,5 @@ shinyServer(
     output$calculation <- renderPrint({calculator(input$height,input$weight)})
     
   }
-)
 
+)

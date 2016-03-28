@@ -1,8 +1,8 @@
-#setwd("C:/Users/anlu/Dropbox (dropbox)/R/DEVELOPING DATA PRODUCT/reproducible research project/RepData_PeerAssessment2-master/RepData_PeerAssessment2-master/")
 
-setwd("D:/Dropbox (dropbox)/R/DEVELOPING DATA PRODUCT/reproducible research project/RepData_PeerAssessment2-master/RepData_PeerAssessment2-master/")
+library(rsconnect)
 library(shiny)
-shinyUI(pageWithSidebar(
+shinyUI(
+  pageWithSidebar(
   headerPanel("Body Mass Index (BMI) Calculator"),
   sidebarPanel(
     numericInput('height','Enter Your Height (in)',60,min=0,max=100,step=1),
@@ -16,7 +16,7 @@ shinyUI(pageWithSidebar(
     verbatimTextOutput("heightInput"),
     h4('Your weight'),
     verbatimTextOutput("weightInput"),
-    h4('Your height'),
+    h4('Your BMI'),
     verbatimTextOutput("calculation")
   
   )
